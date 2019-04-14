@@ -13,8 +13,7 @@ $groups = Get-ADGroup -Filter * -SearchBase $ou -Properties MemberOf
 
 $exportList = New-Object System.Collections.ArrayList
 ForEach ($group in $groups) {
-    "Exporting details of " + $group
-    $group
+    #"Exporting details of " + $group
 
     $memberOf = New-Object System.Collections.ArrayList
     ForEach ($parentGroup in $group.MemberOf) {
